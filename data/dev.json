@@ -1,0 +1,24 @@
+{
+  "sectionEyebrow": "Also Builds",
+  "heading": "Web development, on the side.",
+  "sub": "Web Development Lead for Microsoft Student Community — NU Laguna. Real, shipped projects in PHP, MySQL, and JavaScript.",
+  "githubLabel": "github.com/generosomm →",
+  "githubUrl": "https://github.com/generosomm",
+  "projects": [
+    {
+      "stack": "PHP · MySQL",
+      "title": "Document Tracking & Analytics System",
+      "desc": "Full-stack tracking system built for the City Government of Sto. Tomas as Capstone Project Lead."
+    },
+    {
+      "stack": "HTML · CSS · JavaScript",
+      "title": "Nexus Pass",
+      "desc": "Interactive 3D digital credential platform built with vanilla web technologies."
+    },
+    {
+      "stack": "AWS S3",
+      "title": "Portfolio Hosting Prototype",
+      "desc": "Static site demonstrating cloud hosting, combining web development with media production."
+    }
+  ]
+}

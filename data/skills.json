@@ -1,0 +1,10 @@
+{
+  "sectionEyebrow": "Toolkit",
+  "heading": "Software I actually cut in, every week.",
+  "groups": [
+    { "title": "Editing", "items": ["Adobe Premiere Pro", "Adobe After Effects", "CapCut"] },
+    { "title": "Design", "items": ["Canva", "Photoshop (Basic)"] },
+    { "title": "AI-Assisted Workflow", "items": ["Claude", "ChatGPT", "Gemini"] },
+    { "title": "Production & Ops", "items": ["Google Workspace", "Notion / Trello", "Zoom / Discord"] }
+  ]
+}
