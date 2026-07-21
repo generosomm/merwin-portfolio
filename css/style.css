@@ -647,7 +647,7 @@ section {
 /* contact */
 /* contact */
 .contact { text-align: center; padding-bottom: 60px; }
-.contact h2 { font-size: clamp(32px, 5.5vw, 64px); margin-bottom: 18px; line-height: 1; }
+.contact h2 { font-size: clamp(32px, 5.5vw, 64px); margin: 0 auto 18px; line-height: 1; }
 .contact p { color: var(--text-dim); font-size: 15.5px; max-width: 500px; margin: 0 auto 28px; line-height: 1.6; }
 .contact-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 36px; }
 .contact-meta { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: var(--text-dim); }
@@ -770,6 +770,7 @@ footer {
   .hero-cta a { flex: 0 0 auto; width: auto; padding: 10px 18px; font-size: 12.5px; text-align: center; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); margin-top: 16px; }
   .hero-stats div { padding: 10px 8px; }
+  .hero-stats div:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .hero-stats strong { font-size: 19px; margin-bottom: 1px; }
   .hero-stats span { font-size: 8.5px; }
 
@@ -793,9 +794,12 @@ footer {
   /* About */
   .about-grid { gap: 20px; }
 
+  /* Toolkit */
+  .toolkit-grid { grid-template-columns: 1fr; }
+
   /* Contact */
   .contact { padding-bottom: 40px; }
-  .contact h2 { font-size: clamp(24px, 8vw, 36px); margin-bottom: 12px; }
+  .contact h2 { font-size: clamp(24px, 8vw, 36px); margin: 0 auto 12px; }
   .contact p { font-size: 13.5px; margin-bottom: 20px; }
   .contact-actions { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 24px; }
   .contact-actions a { width: auto; text-align: center; padding: 10px 18px; font-size: 12.5px; }
