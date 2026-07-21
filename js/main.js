@@ -278,36 +278,21 @@ function renderStats(data) {
   if (!el) return;
   if (!data) { el.innerHTML = emptyState("Stats section is missing."); return; }
 
-  const rows = list(data.rows);
-  const bars = list(data.bars);
+  const images = list(data.images);
 
   el.innerHTML = `
     <div class="section-inner">
       ${sectionHead(3, "By The Numbers", data)}
-      ${rows.length || bars.length
-        ? `<div class="stats-cols">
-             <div>
-               ${rows.map((r,i) =>
-                 `<div class="stat-row reveal" style="transition-delay:${revealDelay(i)};">
-                    <span>${esc(pick(r,"label",""))}</span>
-                    <span>${esc(pick(r,"value",""))}</span>
-                  </div>`).join("")}
-             </div>
-             <div>
-               ${bars.map((b,i) => {
-                 const pct = Math.max(0, Math.min(100, Number(b.percent) || 0));
-                 return `
-                 <div class="reveal" style="margin-bottom:24px; transition-delay:${revealDelay(i)};">
-                   <div class="stat-row" style="border:none; padding-bottom:6px;">
-                     <span>${esc(pick(b,"label",""))}</span>
-                     <span>${esc(pick(b,"value",""))}</span>
-                   </div>
-                   <div class="demo-bar"><div class="demo-fill" style="width:${pct}%;"></div></div>
-                 </div>`;
-               }).join("")}
-             </div>
+      ${images.length
+        ? `<div class="stats-image-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 32px;">
+             ${images.map((img, i) =>
+               `<div class="stat-img-card reveal" style="transition-delay:${revealDelay(i)}; border: 1px solid var(--border-dark); border-radius: 8px; overflow: hidden; background: var(--bg-dark);">
+                  <img src="${esc(img)}" alt="Analytics screenshot" style="width: 100%; height: auto; display: block; filter: grayscale(20%); transition: filter 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(20%)'">
+                </div>`
+             ).join("")}
            </div>`
-        : emptyState("No stats added yet.")}
+        : emptyState("No stats screenshots added yet.")}
+      ${data.note ? `<p class="service-note reveal" style="margin-top:24px;">${esc(data.note)}</p>` : ""}
     </div>`;
 }
 

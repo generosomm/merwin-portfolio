@@ -2,10 +2,10 @@
   "sectionEyebrow": "By The Numbers",
   "heading": "Real audience data, not vanity metrics.",
   "images": [
-    "assets/images/stat-1.jpg",
-    "assets/images/stat-2.jpg",
-    "assets/images/stat-3.jpg",
-    "assets/images/stat-4.jpg"
+    "assets/images/stat-1.png",
+    "assets/images/stat-2.png",
+    "assets/images/stat-3.png",
+    "assets/images/stat-4.png"
   ],
   "note": "Replace these placeholders in assets/images/ with your actual analytics screenshots."
 }
