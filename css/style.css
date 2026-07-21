@@ -61,6 +61,7 @@ body {
 ::selection { background: var(--gold); color: #fff; }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3, h4 { font-family: 'Archivo Black', sans-serif; font-weight: 400; letter-spacing: -0.02em; }
+.section-head h2 { font-family: 'Helvetica', 'Arial', sans-serif; }
 .mono { font-family: 'IBM Plex Mono', monospace; }
 :focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
 
@@ -103,64 +104,7 @@ h1, h2, h3, h4 { font-family: 'Archivo Black', sans-serif; font-weight: 400; let
   transition: opacity 0.4s ease;
 }
 
-/* custom cursor */
-@media (hover: hover) and (pointer: fine) {
-  body, a, button, input, select, textarea, [role="button"] {
-    cursor: none !important;
-  }
-}
 
-.custom-cursor {
-  position: fixed; inset: 0; pointer-events: none; z-index: 99999;
-}
-
-.cursor-dot {
-  position: fixed; top: 0; left: 0;
-  width: 28px; height: 28px;
-  background: transparent;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 100000;
-  display: flex; align-items: center; justify-content: center;
-  filter: drop-shadow(0 0 6px rgba(124, 147, 255, 0.7));
-  transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-.cat-svg {
-  width: 26px; height: 26px;
-  display: block;
-}
-
-@media (pointer: coarse) {
-  .custom-cursor, .bg-cursor-glow {
-    display: none !important;
-  }
-}
-
-.cursor-ring {
-  position: fixed; top: 0; left: 0;
-  width: 44px; height: 44px;
-  border: 1.5px solid rgba(255, 255, 255, 0.45);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 12px rgba(61, 92, 255, 0.22), inset 0 0 8px rgba(61, 92, 255, 0.12);
-  transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
-  pointer-events: none;
-  z-index: 99999;
-}
-
-/* Hover effect over interactive elements */
-body.cursor-hover .cursor-ring {
-  width: 58px; height: 58px;
-  border-color: var(--gold);
-  background: rgba(61, 92, 255, 0.12);
-  box-shadow: 0 0 24px rgba(61, 92, 255, 0.5), inset 0 0 16px rgba(61, 92, 255, 0.25);
-}
-body.cursor-hover .cursor-dot {
-  transform: translate(-50%, -50%) scale(1.25) rotate(-8deg);
-  filter: drop-shadow(0 0 10px rgba(124, 147, 255, 0.95)) drop-shadow(0 0 18px rgba(61, 92, 255, 0.7));
-}
 
 /* interactive effects (tilt & magnetic) */
 .case-card, .service-card, .dev-card, .tool-card {

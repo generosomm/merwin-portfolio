@@ -284,10 +284,12 @@ function renderStats(data) {
     <div class="section-inner">
       ${sectionHead(3, "By The Numbers", data)}
       ${images.length
-        ? `<div class="stats-image-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 32px;">
+        ? `<div class="stats-image-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 32px;">
              ${images.map((img, i) =>
                `<div class="stat-img-card reveal" style="transition-delay:${revealDelay(i)}; border: 1px solid var(--border-dark); border-radius: 8px; overflow: hidden; background: var(--bg-dark);">
-                  <img src="${esc(img)}" alt="Analytics screenshot" style="width: 100%; height: auto; display: block; filter: grayscale(20%); transition: filter 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(20%)'">
+                  <a href="${esc(img)}" target="_blank" rel="noopener noreferrer" style="display: block; cursor: zoom-in;">
+                    <img src="${esc(img)}" alt="Analytics screenshot" style="width: 100%; height: auto; display: block; filter: grayscale(20%); transition: filter 0.3s, transform 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.transform='scale(1.02)';" onmouseout="this.style.filter='grayscale(20%)'; this.style.transform='scale(1)';">
+                  </a>
                 </div>`
              ).join("")}
            </div>`
