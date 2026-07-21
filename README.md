@@ -1,6 +1,6 @@
-# ERO | VISUALS — Portfolio Site
+# ERO | VISUALS — Video Editor & Social Media Marketing Portfolio
 
-My personal portfolio site as a video editor and content creator. Built with plain HTML, CSS, and JavaScript — no frameworks.
+My personal portfolio site showcasing my work as a Video Editor and Social Media Marketer. Built with plain HTML, CSS, and JavaScript — no frameworks.
 
 **Live site:** add your deployed link here
 **Contact:** generosomerwin10@gmail.com
@@ -43,7 +43,7 @@ Easiest options:
 
 ## About me
 
-4th year BS Information Technology student (NU Laguna × Asia Pacific College), video editor running ERO | VISUALS, and Web Development Lead for Microsoft Student Community — NU Laguna.
+4th year BS Information Technology student (NU Laguna × Asia Pacific College) and the video editor running ERO | VISUALS. I specialize in crafting engaging content, video editing, and executing social media marketing strategies to build impactful online presences.
 
 - TikTok: [@eroedtx](https://www.tiktok.com/@eroedtx)
 - LinkedIn: [generosomm](https://linkedin.com/in/generosomm)

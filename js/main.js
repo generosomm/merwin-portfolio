@@ -1,7 +1,4 @@
-// main.js
-// Loads content from /data/*.json and renders each section.
-// To change site content, just edit the JSON files — no need to touch this file.
-// If a JSON file is missing/broken, that section shows a graceful fallback.
+// Main script
 
 const DATA_FILES = {
   nav:          "data/nav.json",
@@ -16,7 +13,7 @@ const DATA_FILES = {
   contact:      "data/contact.json",
 };
 
-// helpers
+// Helpers
 
 function esc(value) {
   if (value === null || value === undefined) return "";
@@ -57,7 +54,7 @@ function sectionHead(index, label, data) {
     </div>`;
 }
 
-// data loading
+// Data
 
 async function loadData() {
   const results = await Promise.allSettled(
@@ -87,7 +84,7 @@ async function loadData() {
   return { data, failed };
 }
 
-// render functions
+// Render
 
 function renderNav(data) {
   const el = document.getElementById("nav-root");
@@ -97,7 +94,7 @@ function renderNav(data) {
   if (!items.length) { el.innerHTML = ""; return; }
 
   const brand = esc(pick(data, "brand", "MG"));
-  // Split brand at first space for accent coloring e.g. "MERWIN GENEROSO"
+  // I split my name at the first space to highlight the last name
   const brandParts = brand.split(" ");
   const brandHTML = brandParts.length > 1
     ? `${brandParts[0]} <strong>${brandParts.slice(1).join(" ")}</strong>`
@@ -128,7 +125,7 @@ function renderHero(data) {
   const ctaPrimary   = data.ctaPrimary   || {};
   const ctaSecondary = data.ctaSecondary || {};
 
-  // Build marquee track items dynamically from data.marquee
+  // Build marquee
   const rawMarquee = list(data.marquee);
   const marqueeItems = rawMarquee.length
     ? rawMarquee
@@ -142,8 +139,7 @@ function renderHero(data) {
   const itemHTML = (item) =>
     `<span>${esc(item)}</span><span class="m-sep">✦</span>`;
 
-  // Repeat items inside a group to ensure 1 group is wider than 4K screens (~16 items min)
-  const repeatCount = Math.max(4, Math.ceil(16 / marqueeItems.length));
+  // I repeat items to ensure the marquee fills wide screens
   let groupItems = [];
   for (let i = 0; i < repeatCount; i++) {
     groupItems = groupItems.concat(marqueeItems);
@@ -151,7 +147,7 @@ function renderHero(data) {
 
   const groupContent = groupItems.map(itemHTML).join("");
 
-  // 2 identical groups = 100% mathematically seamless infinite loop
+  // 2 groups create a seamless infinite loop
   const marqueeTrackHTML = `
     <div class="hero-marquee-group">${groupContent}</div>
     <div class="hero-marquee-group" aria-hidden="true">${groupContent}</div>
@@ -393,9 +389,9 @@ function renderContact(data) {
   if (footerEl) footerEl.innerHTML = esc(pick(data,"footerNote",""));
 }
 
-// interactive behaviours
+// Interactions
 
-// Highlights the active nav link as you scroll
+// Scroll spy
 function initScrollSpy() {
   const markers = document.querySelectorAll(".marker");
   if (!markers.length) return;
@@ -446,7 +442,7 @@ function initScrollSpy() {
   updateActiveNav();
 }
 
-// Slowly auto-scrolls the work marquee; pauses on hover/touch/drag
+// Marquee scroll
 function initWorkMarquee() {
   const marquee = document.getElementById("workMarquee");
   const track   = document.getElementById("workTrack");
@@ -778,7 +774,7 @@ function initParallaxHero() {
   }, { passive: true });
 }
 
-// entry point
+// Init
 
 async function init() {
   const { data, failed } = await loadData();
@@ -808,17 +804,15 @@ async function init() {
   if (failed.length === Object.keys(DATA_FILES).length) {
     document.body.innerHTML = `
       <div class="load-msg error">
-        Couldn't load any site content.<br><br>
-        This usually means the page was opened directly as a file (file://).<br>
-        Run a local server instead — e.g. the VS Code "Live Server" extension,
-        or <code>python -m http.server</code> in this folder, then reload.
+        I couldn't load my site content.<br>
+        Please run this via a local server (like VS Code Live Server) instead of opening the file directly.
       </div>`;
   } else if (failed.length) {
     console.warn("Some sections failed to load:", failed.join(", "));
   }
 }
 
-// Image Modal Logic
+// Modal
 const imageModal = document.getElementById("imageModal");
 const imageModalImg = document.getElementById("imageModalImg");
 
