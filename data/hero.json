@@ -10,12 +10,30 @@
   "nameLine2Start": "GENE",
   "nameLine2Accent": "ROSO",
   "tagline": "I edit high-retention short-form content that scales. 124M+ views driven through aggressive storytelling and data-backed pacing.",
-  "ctaPrimary": { "label": "Let's Talk", "href": "#contact" },
+  "ctaPrimary": {
+    "label": "Let's Talk",
+    "href": "#contact"
+  },
   "stats": [
-    { "value": "124M+", "label": "Cumulative Views" },
-    { "value": "239K+", "label": "TikTok Followers" },
-    { "value": "16.4K+", "label": "YT Subscribers" },
-    { "value": "1.9K+", "label": "IG Followers" },
-    { "value": "644+", "label": "YT Videos" }
+    {
+      "value": "124M+",
+      "label": "Cumulative Views"
+    },
+    {
+      "value": "239K+",
+      "label": "TikTok Followers"
+    },
+    {
+      "value": "16.4K+",
+      "label": "YT Subscribers"
+    },
+    {
+      "value": "1.9K+",
+      "label": "IG Followers"
+    },
+    {
+      "value": "644+",
+      "label": "YT Videos"
+    }
   ]
 }
