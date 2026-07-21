@@ -3,14 +3,14 @@
   "marquee": [
     "VIDEO EDITING",
     "CONTENT OPERATIONS",
-    "PAID SOCIAL"
+    "CONTENT STRATEGY",
+    "RETENTION OPTIMIZATION"
   ],
   "nameLine1": "MERWIN",
   "nameLine2Start": "GENE",
   "nameLine2Accent": "ROSO",
-  "tagline": "I turn raw footage into high-performing content. No fluff, just edits that retain attention and drive views. 124M+ cumulative views and counting.",
+  "tagline": "I edit high-retention short-form content that scales. 124M+ views driven through aggressive storytelling and data-backed pacing.",
   "ctaPrimary": { "label": "Let's Talk", "href": "#contact" },
-  "ctaSecondary": { "label": "See My Work", "href": "#dev" },
   "stats": [
     { "value": "124M+", "label": "Cumulative Views" },
     { "value": "239K+", "label": "TikTok Followers" },
